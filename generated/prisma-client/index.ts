@@ -193,7 +193,7 @@ export interface PostUpdateManyWithoutAuthorInput {
 
 export interface UserCreateInput {
   id?: Maybe<ID_Input>;
-  email?: Maybe<String>;
+  email: String;
   name: String;
   posts?: Maybe<PostCreateManyWithoutAuthorInput>;
 }
@@ -238,7 +238,7 @@ export interface PostUpdateManyWithWhereNestedInput {
 
 export interface UserCreateWithoutPostsInput {
   id?: Maybe<ID_Input>;
-  email?: Maybe<String>;
+  email: String;
   name: String;
 }
 
@@ -442,7 +442,7 @@ export interface NodeNode {
 
 export interface UserPreviousValues {
   id: ID_Output;
-  email?: String;
+  email: String;
   name: String;
 }
 
@@ -487,7 +487,7 @@ export interface PageInfoSubscription
 
 export interface User {
   id: ID_Output;
-  email?: String;
+  email: String;
   name: String;
 }
 

@@ -260,7 +260,7 @@ type Subscription {
 
 type User {
   id: ID!
-  email: String
+  email: String!
   name: String!
   posts(where: PostWhereInput, orderBy: PostOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [Post!]
 }
@@ -273,7 +273,7 @@ type UserConnection {
 
 input UserCreateInput {
   id: ID
-  email: String
+  email: String!
   name: String!
   posts: PostCreateManyWithoutAuthorInput
 }
@@ -285,7 +285,7 @@ input UserCreateOneWithoutPostsInput {
 
 input UserCreateWithoutPostsInput {
   id: ID
-  email: String
+  email: String!
   name: String!
 }
 
@@ -305,7 +305,7 @@ enum UserOrderByInput {
 
 type UserPreviousValues {
   id: ID!
-  email: String
+  email: String!
   name: String!
 }
 
